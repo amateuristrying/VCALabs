@@ -507,6 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (currentSlide === 8) goToSlide(9);
       else if (currentSlide === 9) goToSlide(10);
       else if (currentSlide === 10) goToSlide(11);
+      else if (currentSlide === 11) goToSlide(1);
     } else if (dy < 0 || dx < 0) {
       // Scroll Up/Left -> Go backward
       if (currentSlide === 11) goToSlide(10);
@@ -519,6 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
       else if (currentSlide === 4) goToSlide(3);
       else if (currentSlide === 3) goToSlide(2);
       else if (currentSlide === 2) goToSlide(1);
+      else if (currentSlide === 1) goToSlide(11);
     }
   }, { passive: false });
 
@@ -554,7 +556,8 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (currentSlide === 7) goToSlide(8);
         else if (currentSlide === 8) goToSlide(9);
         else if (currentSlide === 9) goToSlide(10);
-      else if (currentSlide === 10) goToSlide(11);
+        else if (currentSlide === 10) goToSlide(11);
+        else if (currentSlide === 11) goToSlide(1);
       } else if (deltaY < -swipeThreshold || deltaX < -swipeThreshold) {
         // Swiping DOWN or RIGHT -> Retreat slide
         if (currentSlide === 11) goToSlide(10);
@@ -567,6 +570,7 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (currentSlide === 4) goToSlide(3);
         else if (currentSlide === 3) goToSlide(2);
         else if (currentSlide === 2) goToSlide(1);
+        else if (currentSlide === 1) goToSlide(11);
       }
       
       // Reset start coordinates to prevent repeat triggering in same gesture
@@ -1196,24 +1200,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const offsetY = 272;
 
   if (navIdeapad && ideapadModal) {
-    // Open IdeaPad
-    navIdeapad.addEventListener('click', (e) => {
-      e.preventDefault();
-      
-      ideapadModal.style.top = 'auto';
-      ideapadModal.style.bottom = '40px';
-      ideapadModal.style.left = '40px';
-      ideapadModal.style.transformOrigin = 'bottom left';
-      ideapadModal.style.transform = `scale(${currentIpScale})`;
-      
-      ideapadModal.classList.add('active');
-      ideapadTextarea.focus();
-    });
-
     // Close IdeaPad
     const closeIdeaPad = () => {
       ideapadModal.classList.remove('active');
     };
+
+    // Toggle IdeaPad
+    navIdeapad.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      if (ideapadModal.classList.contains('active')) {
+        closeIdeaPad();
+      } else {
+        ideapadModal.style.top = 'auto';
+        ideapadModal.style.bottom = '40px';
+        ideapadModal.style.left = '40px';
+        ideapadModal.style.transformOrigin = 'bottom left';
+        ideapadModal.style.transform = `scale(${currentIpScale})`;
+        
+        ideapadModal.classList.add('active');
+        ideapadTextarea.focus();
+      }
+    });
 
     ideapadClose.addEventListener('click', closeIdeaPad);
     ideapadSave.addEventListener('click', closeIdeaPad);

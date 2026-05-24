@@ -870,7 +870,8 @@ body {
 /* SCREEN 5: SANDHYA DETAIL STYLING */
 .sandhya-content {
   position: absolute;
-  top: 50px; /* Equidistant from upper edge of screen */
+  top: 50%;
+  transform: translateY(-50%);
   right: 50px; /* Equidistant from right side of screen */
   z-index: 4;
   text-align: center;
