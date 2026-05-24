@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>VCA Labs | Advanced Interactive Systems & Core Engineering</title>
+  <meta name="description" content="VCA Labs is an immersive digital laboratory conducting technical research and building high-fidelity human-machine experiences.">
+  <meta name="theme-color" content="#050508">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VCA Labs | Advanced Interactive Systems">
+  <meta property="og:description" content="Immersive digital laboratory conducting technical research and building high-fidelity experiences.">
+  <meta property="og:image" content="">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VCA Labs | Advanced Interactive Systems">
+  <meta name="twitter:description" content="Immersive digital laboratory conducting technical research and building high-fidelity experiences.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Global Logo Tab -->
+  <div class="global-logo-tab" id="global-logo-tab" role="button" aria-label="Go to Home" title="VCA Labs">
+    <div class="mini-brand-wrapper">
+      <div class="mini-brand-title">VCA</div>
+      <div class="mini-brand-subtitle">Labs</div>
+    </div>
+  </div>
+
+  <!-- Top Navigation -->
+  <nav class="hero-nav" id="hero-nav">
+    <a href="#mission" class="nav-link">Our Mission</a>
+    <a href="#lineup" class="nav-link" id="nav-lineup">Product Lineup</a>
+    <a href="#ideapad" class="nav-link" id="nav-ideapad">IdeaPad</a>
+  </nav>
+
+  <!-- Global Interactive Canvas Particle Field (Fixed Background Layer) -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Snapping Scroll Container (2D Grid Layout) -->
+  <div class="scroll-container" id="scroll-deck">
+
+    <!-- SCREEN 1: HERO CONTAINER (x:0, y:0) -->
+    <section class="snap-section" id="section-hero">
+      
+      <!-- Video 1 Background -->
+      <div class="video-background-container" id="video-container-hero">
+        <video 
+          class="bg-video" 
+          id="bg-video-hero" 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="INDRATIR.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="overlay-shield-hero"></div>
+      </div>
+
+      <!-- Centered Brand Logo (Hero Entry Button) -->
+      <div class="brand-container" id="brand-container" role="button" aria-label="Explore VCA Labs" title="Click to Enter">
+        <div class="brand-wrapper" id="brand-wrapper">
+          <h1 class="brand-title" id="logo-vca">VCA</h1>
+          <div class="brand-subtitle" id="logo-labs">Labs</div>
+        </div>
+      </div>
+
+      <!-- Bottom Command Deck -->
+      <div class="controls-container" id="controls-container">
+        <div class="labs-meta" id="labs-meta-data">
+          Minimal software, maximum clarity.
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SCREEN 2: MINIMALIST ABOUT SECTION (x:0, y:100vh) -->
+    <section class="snap-section" id="section-about" role="button" aria-label="Tap to see lineup" title="Tap anywhere to see lineup">
+      
+      <!-- Video 2 Background -->
+      <div class="video-background-container" id="video-container-about">
+        <video 
+          class="bg-video" 
+          id="bg-video-about" 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="the%20mission.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="overlay-shield-about"></div>
+      </div>
+
+      <!-- Pure White Centered Typography Layer -->
+      <div class="about-content" id="about-content">
+        <h2 class="about-heading" id="about-heading">
+          A Message by the Creator
+        </h2>
+        <p class="about-subtext" id="about-subtext">
+          At VCA Labs, we believe software should empower people, not overwhelm them. Our principles are rooted in simplicity, openness, and decentralization, creating systems that feel calm, fast, and naturally fit into everyday life. This site is a glimpse into the ideas, tools, and experiences we are building to make technology feel more human and approachable.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- SCREEN 3: PRODUCT LINEUP SECTION (x:100vw, y:100vh) -->
+    <section class="snap-section" id="section-products" role="button" aria-label="Tap to go back" title="Tap anywhere to go back">
+      
+      <!-- Video 3 Background -->
+      <div class="video-background-container" id="video-container-products">
+        <video 
+          class="bg-video" 
+          id="bg-video-products" 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="vid3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="overlay-shield-products"></div>
+      </div>
+
+      <!-- Centered Minimalist Product Catalog Overlay -->
+      <div class="products-content" id="products-content">
+        <h2 class="products-title" id="products-title">Product Lineup</h2>
+        
+        <div class="products-grid" id="products-grid">
+          
+          <!-- Column 1: Core Systems -->
+          <div class="products-column">
+            <div class="product-item" data-target="4" style="cursor: pointer;">
+              <h3 class="product-name">stonksbot</h3>
+              <p class="product-desc">become a better trader app</p>
+            </div>
+
+            <div class="product-item" data-target="5" style="cursor: pointer;">
+              <h3 class="product-name">sandhya</h3>
+              <p class="product-desc">daily rituals tracker</p>
+            </div>
+
+            <div class="product-item" data-target="6" style="cursor: pointer;">
+              <h3 class="product-name">jimbro</h3>
+              <p class="product-desc">the app for people who go jim.</p>
+            </div>
+
+            <div class="product-item" data-target="7" style="cursor: pointer;">
+              <h3 class="product-name">agni</h3>
+              <p class="product-desc">the frontier ai agents skills platform</p>
+            </div>
+          </div>
+
+          <!-- Column 2: Expanded Suite -->
+          <div class="products-column">
+            <div class="product-item" data-target="8" style="cursor: pointer;">
+              <h3 class="product-name">doctrine</h3>
+              <p class="product-desc">grand political strategy simulation</p>
+            </div>
+
+            <div class="product-item" data-target="9" style="cursor: pointer;">
+              <h3 class="product-name">indratir</h3>
+              <p class="product-desc">operational intelligence platform</p>
+            </div>
+
+            <div class="product-item" data-target="10" style="cursor: pointer;">
+              <h3 class="product-name">wtf charts</h3>
+              <p class="product-desc">curated gallery of wtf charts</p>
+            </div>
+
+            <div class="product-item" data-target="11" style="cursor: pointer;">
+              <h3 class="product-name">Kylo</h3>
+              <p class="product-desc">systems intelligence platform</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SCREEN 4: STONKSBOT PRODUCT DISPLAY (x:100vw, y:200vh) -->
+    <section class="snap-section" id="section-stonks">
+
+      <!-- Video 4 Background -->
+      <div class="video-background-container" id="video-container-stonks">
+        <video 
+          class="bg-video" 
+          id="bg-video-stonks" 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="stonksbot.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="overlay-shield-stonks"></div>
+      </div>
+
+      <!-- Pure White Centered Minimal Product Details Overlay -->
+      <div class="stonks-content" id="stonks-content">
+        <div class="glass-card" id="stonks-card">
+          <h2 class="stonks-heading" id="stonks-heading">stonksbot</h2>
+          <p class="stonks-subtext" id="stonks-subtext">
+            become a better trader app. an intelligent dashboard combining real-time market data with machine learning algorithms to elevate your trading strategies.
+          </p>
+          <!-- Social Links -->
+          <div class="social-links-wrapper" id="stonks-socials">
+            <a href="#" class="social-link" aria-label="Website">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Reddit">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.12c0 1.258 1.026 2.277 2.287 2.277 1.26 0 2.28-1.019 2.28-2.277 0-1.258-1.02-2.278-2.28-2.278-.962 0-1.782.593-2.125 1.442l-4.526-1.06a.717.717 0 0 0-.85.508l-1.706 5.373c-2.825.045-5.385.834-7.25 2.073-.483-.484-1.155-.783-1.895-.783-1.465 0-2.657 1.186-2.657 2.645 0 .971.523 1.815 1.3 2.253-.021.173-.031.35-.031.528 0 3.493 4.54 6.331 10.136 6.331 5.594 0 10.134-2.838 10.134-6.331 0-.179-.011-.355-.031-.529.776-.438 1.299-1.282 1.299-2.253zm-19.165 1.194c0-.756.617-1.371 1.374-1.371.288 0 .548.089.764.242-1.096.837-1.821 1.884-2.039 3.037-.058-.255-.099-.516-.099-.785zm5.553 4.603c-1.332 0-2.627-.193-3.619-.512a.637.637 0 0 1-.444-.795.636.636 0 0 1 .792-.444c.833.267 2.015.467 3.271.467 1.257 0 2.438-.2 3.271-.467a.636.636 0 0 1 .792.444.637.637 0 0 1-.444.795c-.992.319-2.287.512-3.619.512zm-1.867-2.68c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm6.657 0c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm1.905-.985c-.218-1.152-.942-2.198-2.038-3.036.216-.153.475-.243.763-.243.757 0 1.375.615 1.375 1.371 0 .269-.041.531-.1.786z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Kickstarter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.518 10.364l-4.735-4.482c-.378-.388-.868-.614-1.443-.614-1.04 0-1.921.841-1.921 1.944v10.301c0 1.051.815 1.884 1.902 1.884.585 0 1.077-.245 1.48-.687l5.109-5.719c.406-.471.558-1.037.558-1.637 0-.585-.207-1.112-.56-1.503L16.518 10.364zM6.48 4.298c0-1.04.832-1.885 1.866-1.885.558 0 1.066.218 1.453.624.378.397.595.915.595 1.472v14.73c0 .546-.217 1.045-.585 1.433-.396.406-.885.623-1.443.623-1.03 0-1.886-.84-1.886-1.894V4.298h.001z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+          
+          
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SCREEN 5: SANDHYA PRODUCT DISPLAY (x:200vw, y:200vh) -->
+    <section class="snap-section" id="section-sandhya">
+
+      <!-- Video 5 Background -->
+      <div class="video-background-container" id="video-container-sandhya">
+        <video 
+          class="bg-video" 
+          id="bg-video-sandhya" 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="sandhya.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="overlay-shield-sandhya"></div>
+      </div>
+
+      <!-- Pure White Centered Minimal Product Details Overlay -->
+      <div class="sandhya-content" id="sandhya-content">
+        <div class="glass-card-wrapper" id="sandhya-positioner">
+          <div class="glass-card" id="sandhya-card">
+            <h2 class="sandhya-heading" id="sandhya-heading">sandhya</h2>
+            <p class="sandhya-subtext" id="sandhya-subtext">
+              a quiet companion for modern hindu life. sandhya is a calm mobile app designed to help you stay connected to your roots through daily tithis, ekadashi reminders, and peaceful ritual widgets.
+            </p>
+          <!-- Social Links -->
+          <div class="social-links-wrapper" id="sandhya-socials">
+            <a href="#" class="social-link" aria-label="Website">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Reddit">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.12c0 1.258 1.026 2.277 2.287 2.277 1.26 0 2.28-1.019 2.28-2.277 0-1.258-1.02-2.278-2.28-2.278-.962 0-1.782.593-2.125 1.442l-4.526-1.06a.717.717 0 0 0-.85.508l-1.706 5.373c-2.825.045-5.385.834-7.25 2.073-.483-.484-1.155-.783-1.895-.783-1.465 0-2.657 1.186-2.657 2.645 0 .971.523 1.815 1.3 2.253-.021.173-.031.35-.031.528 0 3.493 4.54 6.331 10.136 6.331 5.594 0 10.134-2.838 10.134-6.331 0-.179-.011-.355-.031-.529.776-.438 1.299-1.282 1.299-2.253zm-19.165 1.194c0-.756.617-1.371 1.374-1.371.288 0 .548.089.764.242-1.096.837-1.821 1.884-2.039 3.037-.058-.255-.099-.516-.099-.785zm5.553 4.603c-1.332 0-2.627-.193-3.619-.512a.637.637 0 0 1-.444-.795.636.636 0 0 1 .792-.444c.833.267 2.015.467 3.271.467 1.257 0 2.438-.2 3.271-.467a.636.636 0 0 1 .792.444.637.637 0 0 1-.444.795c-.992.319-2.287.512-3.619.512zm-1.867-2.68c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm6.657 0c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm1.905-.985c-.218-1.152-.942-2.198-2.038-3.036.216-.153.475-.243.763-.243.757 0 1.375.615 1.375 1.371 0 .269-.041.531-.1.786z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Kickstarter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.518 10.364l-4.735-4.482c-.378-.388-.868-.614-1.443-.614-1.04 0-1.921.841-1.921 1.944v10.301c0 1.051.815 1.884 1.902 1.884.585 0 1.077-.245 1.48-.687l5.109-5.719c.406-.471.558-1.037.558-1.637 0-.585-.207-1.112-.56-1.503L16.518 10.364zM6.48 4.298c0-1.04.832-1.885 1.866-1.885.558 0 1.066.218 1.453.624.378.397.595.915.595 1.472v14.73c0 .546-.217 1.045-.585 1.433-.396.406-.885.623-1.443.623-1.03 0-1.886-.84-1.886-1.894V4.298h.001z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+            
+            
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SCREEN 6: JIMBRO PRODUCT DISPLAY (x:200vw, y:300vh) -->
+    <section class="snap-section" id="section-jimbro">
+
+      <!-- Video 6 Background -->
+      <div class="video-background-container" id="video-container-jimbro">
+        <video 
+          class="bg-video" 
+          id="bg-video-jimbro" 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="jimbro.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="overlay-shield-jimbro"></div>
+      </div>
+
+      <!-- Pure White Centered Minimal Product Details Overlay -->
+      <div class="jimbro-content" id="jimbro-content">
+        <div class="glass-card-wrapper" id="jimbro-positioner">
+          <div class="glass-card" id="jimbro-card">
+            <h2 class="jimbro-heading" id="jimbro-heading">jimbro</h2>
+            <p class="jimbro-subtext" id="jimbro-subtext">
+              the app for people who go jim. tracks your sets, reps, and gains with zero friction, keeping you focused on the iron.
+            </p>
+          <!-- Social Links -->
+          <div class="social-links-wrapper" id="jimbro-socials">
+            <a href="#" class="social-link" aria-label="Website">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Reddit">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.12c0 1.258 1.026 2.277 2.287 2.277 1.26 0 2.28-1.019 2.28-2.277 0-1.258-1.02-2.278-2.28-2.278-.962 0-1.782.593-2.125 1.442l-4.526-1.06a.717.717 0 0 0-.85.508l-1.706 5.373c-2.825.045-5.385.834-7.25 2.073-.483-.484-1.155-.783-1.895-.783-1.465 0-2.657 1.186-2.657 2.645 0 .971.523 1.815 1.3 2.253-.021.173-.031.35-.031.528 0 3.493 4.54 6.331 10.136 6.331 5.594 0 10.134-2.838 10.134-6.331 0-.179-.011-.355-.031-.529.776-.438 1.299-1.282 1.299-2.253zm-19.165 1.194c0-.756.617-1.371 1.374-1.371.288 0 .548.089.764.242-1.096.837-1.821 1.884-2.039 3.037-.058-.255-.099-.516-.099-.785zm5.553 4.603c-1.332 0-2.627-.193-3.619-.512a.637.637 0 0 1-.444-.795.636.636 0 0 1 .792-.444c.833.267 2.015.467 3.271.467 1.257 0 2.438-.2 3.271-.467a.636.636 0 0 1 .792.444.637.637 0 0 1-.444.795c-.992.319-2.287.512-3.619.512zm-1.867-2.68c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm6.657 0c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm1.905-.985c-.218-1.152-.942-2.198-2.038-3.036.216-.153.475-.243.763-.243.757 0 1.375.615 1.375 1.371 0 .269-.041.531-.1.786z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Kickstarter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.518 10.364l-4.735-4.482c-.378-.388-.868-.614-1.443-.614-1.04 0-1.921.841-1.921 1.944v10.301c0 1.051.815 1.884 1.902 1.884.585 0 1.077-.245 1.48-.687l5.109-5.719c.406-.471.558-1.037.558-1.637 0-.585-.207-1.112-.56-1.503L16.518 10.364zM6.48 4.298c0-1.04.832-1.885 1.866-1.885.558 0 1.066.218 1.453.624.378.397.595.915.595 1.472v14.73c0 .546-.217 1.045-.585 1.433-.396.406-.885.623-1.443.623-1.03 0-1.886-.84-1.886-1.894V4.298h.001z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+            
+            
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SCREEN 7: AGNI PRODUCT DISPLAY (x:300vw, y:300vh) -->
+    <section class="snap-section" id="section-agni">
+
+      <!-- Video 7 Background -->
+      <div class="video-background-container" id="video-container-agni">
+        <video 
+          class="bg-video" 
+          id="bg-video-agni" 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="agni.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="overlay-shield-agni"></div>
+      </div>
+
+      <!-- Pure White Centered Minimal Product Details Overlay -->
+      <div class="agni-content" id="agni-content">
+        <div class="glass-card-wrapper" id="agni-positioner">
+          <div class="glass-card" id="agni-card">
+            <h2 class="agni-heading" id="agni-heading">agni</h2>
+            <p class="agni-subtext" id="agni-subtext">
+              the frontier ai agents skills platform. agni enables autonomous agents to dynamically acquire and execute complex capabilities, extending their problem-solving boundaries.
+            </p>
+          <!-- Social Links -->
+          <div class="social-links-wrapper" id="agni-socials">
+            <a href="#" class="social-link" aria-label="Website">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Reddit">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.12c0 1.258 1.026 2.277 2.287 2.277 1.26 0 2.28-1.019 2.28-2.277 0-1.258-1.02-2.278-2.28-2.278-.962 0-1.782.593-2.125 1.442l-4.526-1.06a.717.717 0 0 0-.85.508l-1.706 5.373c-2.825.045-5.385.834-7.25 2.073-.483-.484-1.155-.783-1.895-.783-1.465 0-2.657 1.186-2.657 2.645 0 .971.523 1.815 1.3 2.253-.021.173-.031.35-.031.528 0 3.493 4.54 6.331 10.136 6.331 5.594 0 10.134-2.838 10.134-6.331 0-.179-.011-.355-.031-.529.776-.438 1.299-1.282 1.299-2.253zm-19.165 1.194c0-.756.617-1.371 1.374-1.371.288 0 .548.089.764.242-1.096.837-1.821 1.884-2.039 3.037-.058-.255-.099-.516-.099-.785zm5.553 4.603c-1.332 0-2.627-.193-3.619-.512a.637.637 0 0 1-.444-.795.636.636 0 0 1 .792-.444c.833.267 2.015.467 3.271.467 1.257 0 2.438-.2 3.271-.467a.636.636 0 0 1 .792.444.637.637 0 0 1-.444.795c-.992.319-2.287.512-3.619.512zm-1.867-2.68c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm6.657 0c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm1.905-.985c-.218-1.152-.942-2.198-2.038-3.036.216-.153.475-.243.763-.243.757 0 1.375.615 1.375 1.371 0 .269-.041.531-.1.786z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Kickstarter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.518 10.364l-4.735-4.482c-.378-.388-.868-.614-1.443-.614-1.04 0-1.921.841-1.921 1.944v10.301c0 1.051.815 1.884 1.902 1.884.585 0 1.077-.245 1.48-.687l5.109-5.719c.406-.471.558-1.037.558-1.637 0-.585-.207-1.112-.56-1.503L16.518 10.364zM6.48 4.298c0-1.04.832-1.885 1.866-1.885.558 0 1.066.218 1.453.624.378.397.595.915.595 1.472v14.73c0 .546-.217 1.045-.585 1.433-.396.406-.885.623-1.443.623-1.03 0-1.886-.84-1.886-1.894V4.298h.001z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+            
+            
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SCREEN 8: DOCTRINE PRODUCT DISPLAY (x:300vw, y:400vh) -->
+    <section class="snap-section" id="section-doctrine">
+
+      <!-- Video 8 Background -->
+      <div class="video-background-container" id="video-container-doctrine">
+        <video 
+          class="bg-video" 
+          id="bg-video-doctrine" 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="doctrine.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="overlay-shield-doctrine"></div>
+      </div>
+
+      <!-- Pure White Centered Minimal Product Details Overlay -->
+      <div class="doctrine-content" id="doctrine-content">
+        <div class="glass-card-wrapper" id="doctrine-positioner">
+          <div class="glass-card" id="doctrine-card">
+            <h2 class="doctrine-heading" id="doctrine-heading">doctrine</h2>
+            <p class="doctrine-subtext" id="doctrine-subtext">
+              a systemic civilization and power simulation engine. survive, manipulate, and reshape history in a living world driven by complex geopolitical mechanics rather than scripted events.
+            </p>
+          <!-- Social Links -->
+          <div class="social-links-wrapper" id="doctrine-socials">
+            <a href="#" class="social-link" aria-label="Website">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Reddit">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.12c0 1.258 1.026 2.277 2.287 2.277 1.26 0 2.28-1.019 2.28-2.277 0-1.258-1.02-2.278-2.28-2.278-.962 0-1.782.593-2.125 1.442l-4.526-1.06a.717.717 0 0 0-.85.508l-1.706 5.373c-2.825.045-5.385.834-7.25 2.073-.483-.484-1.155-.783-1.895-.783-1.465 0-2.657 1.186-2.657 2.645 0 .971.523 1.815 1.3 2.253-.021.173-.031.35-.031.528 0 3.493 4.54 6.331 10.136 6.331 5.594 0 10.134-2.838 10.134-6.331 0-.179-.011-.355-.031-.529.776-.438 1.299-1.282 1.299-2.253zm-19.165 1.194c0-.756.617-1.371 1.374-1.371.288 0 .548.089.764.242-1.096.837-1.821 1.884-2.039 3.037-.058-.255-.099-.516-.099-.785zm5.553 4.603c-1.332 0-2.627-.193-3.619-.512a.637.637 0 0 1-.444-.795.636.636 0 0 1 .792-.444c.833.267 2.015.467 3.271.467 1.257 0 2.438-.2 3.271-.467a.636.636 0 0 1 .792.444.637.637 0 0 1-.444.795c-.992.319-2.287.512-3.619.512zm-1.867-2.68c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm6.657 0c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm1.905-.985c-.218-1.152-.942-2.198-2.038-3.036.216-.153.475-.243.763-.243.757 0 1.375.615 1.375 1.371 0 .269-.041.531-.1.786z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Kickstarter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.518 10.364l-4.735-4.482c-.378-.388-.868-.614-1.443-.614-1.04 0-1.921.841-1.921 1.944v10.301c0 1.051.815 1.884 1.902 1.884.585 0 1.077-.245 1.48-.687l5.109-5.719c.406-.471.558-1.037.558-1.637 0-.585-.207-1.112-.56-1.503L16.518 10.364zM6.48 4.298c0-1.04.832-1.885 1.866-1.885.558 0 1.066.218 1.453.624.378.397.595.915.595 1.472v14.73c0 .546-.217 1.045-.585 1.433-.396.406-.885.623-1.443.623-1.03 0-1.886-.84-1.886-1.894V4.298h.001z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+            
+            
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SCREEN 9: INDRATIR PRODUCT DISPLAY (x:200vw, y:400vh) -->
+    <section class="snap-section" id="section-indratir">
+
+      <!-- Video 9 Background -->
+      <div class="video-background-container" id="video-container-indratir">
+        <video 
+          class="bg-video" 
+          id="bg-video-indratir" 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="indratir2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="overlay-shield-indratir"></div>
+      </div>
+
+      <!-- Pure White Centered Minimal Product Details Overlay -->
+      <div class="indratir-content" id="indratir-content">
+        <div class="glass-card-wrapper" id="indratir-positioner">
+          <div class="glass-card" id="indratir-card">
+            <h2 class="indratir-heading" id="indratir-heading">indratir</h2>
+            <p class="indratir-subtext" id="indratir-subtext">
+              an ai-powered operational intelligence platform. it connects fragmented real-world data from sensors and infrastructure into a unified decision engine.
+            </p>
+          <!-- Social Links -->
+          <div class="social-links-wrapper" id="indratir-socials">
+            <a href="#" class="social-link" aria-label="Website">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Reddit">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.12c0 1.258 1.026 2.277 2.287 2.277 1.26 0 2.28-1.019 2.28-2.277 0-1.258-1.02-2.278-2.28-2.278-.962 0-1.782.593-2.125 1.442l-4.526-1.06a.717.717 0 0 0-.85.508l-1.706 5.373c-2.825.045-5.385.834-7.25 2.073-.483-.484-1.155-.783-1.895-.783-1.465 0-2.657 1.186-2.657 2.645 0 .971.523 1.815 1.3 2.253-.021.173-.031.35-.031.528 0 3.493 4.54 6.331 10.136 6.331 5.594 0 10.134-2.838 10.134-6.331 0-.179-.011-.355-.031-.529.776-.438 1.299-1.282 1.299-2.253zm-19.165 1.194c0-.756.617-1.371 1.374-1.371.288 0 .548.089.764.242-1.096.837-1.821 1.884-2.039 3.037-.058-.255-.099-.516-.099-.785zm5.553 4.603c-1.332 0-2.627-.193-3.619-.512a.637.637 0 0 1-.444-.795.636.636 0 0 1 .792-.444c.833.267 2.015.467 3.271.467 1.257 0 2.438-.2 3.271-.467a.636.636 0 0 1 .792.444.637.637 0 0 1-.444.795c-.992.319-2.287.512-3.619.512zm-1.867-2.68c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm6.657 0c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm1.905-.985c-.218-1.152-.942-2.198-2.038-3.036.216-.153.475-.243.763-.243.757 0 1.375.615 1.375 1.371 0 .269-.041.531-.1.786z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Kickstarter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.518 10.364l-4.735-4.482c-.378-.388-.868-.614-1.443-.614-1.04 0-1.921.841-1.921 1.944v10.301c0 1.051.815 1.884 1.902 1.884.585 0 1.077-.245 1.48-.687l5.109-5.719c.406-.471.558-1.037.558-1.637 0-.585-.207-1.112-.56-1.503L16.518 10.364zM6.48 4.298c0-1.04.832-1.885 1.866-1.885.558 0 1.066.218 1.453.624.378.397.595.915.595 1.472v14.73c0 .546-.217 1.045-.585 1.433-.396.406-.885.623-1.443.623-1.03 0-1.886-.84-1.886-1.894V4.298h.001z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+            
+            
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SCREEN 10: WTF CHARTS (x:200vw, y:500vh) -->
+    <section class="snap-section" id="section-wtfcharts">
+
+      <!-- Video 10 Background -->
+      <div class="video-background-container" id="video-container-wtfcharts">
+        <video 
+          class="bg-video" 
+          id="bg-video-wtfcharts" 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="wtf%20charts.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="overlay-shield-wtfcharts"></div>
+      </div>
+
+      <!-- Pure White Centered Minimal Product Details Overlay -->
+      <div class="wtfcharts-content" id="wtfcharts-content">
+        <div class="glass-card-wrapper" id="wtfcharts-positioner">
+          <div class="glass-card" id="wtfcharts-card">
+            <h2 class="wtfcharts-heading" id="wtfcharts-heading">wtf charts</h2>
+            <p class="wtfcharts-subtext" id="wtfcharts-subtext">
+              data visualization for the modern age.
+            </p>
+          <!-- Social Links -->
+          <div class="social-links-wrapper" id="wtfcharts-socials">
+            <a href="#" class="social-link" aria-label="Website">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Designer Console for WTF Charts -->
+      <div class="designer-console" id="wtfcharts-console">
+        <div class="console-header">WTF CHARTS LAYOUT CONSOLE</div>
+        
+        <div class="slider-group">
+          <label for="wtfcharts-scale">Scale: <span id="wtfcharts-scale-val">1.0</span></label>
+          <input type="range" id="wtfcharts-scale" min="0.5" max="1.5" step="0.01" value="1.0">
+        </div>
+
+        <div class="slider-group">
+          <label for="wtfcharts-x">X Position: <span id="wtfcharts-x-val">0px</span></label>
+          <input type="range" id="wtfcharts-x" min="-800" max="800" step="1" value="0">
+        </div>
+
+        <div class="slider-group">
+          <label for="wtfcharts-y">Y Position: <span id="wtfcharts-y-val">0px</span></label>
+          <input type="range" id="wtfcharts-y" min="-800" max="800" step="1" value="0">
+        </div>
+        
+        <div class="console-footer">
+          transform: scale(<span id="wtfcharts-scale-out">1.0</span>)<br>
+          translate(<span id="wtfcharts-x-out">0px</span>, <span id="wtfcharts-y-out">0px</span>);
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- SCREEN 11: KYLO (x:100vw, y:500vh) -->
+    <section class="snap-section" id="section-kylo">
+
+      <!-- Video 11 Background -->
+      <div class="video-background-container" id="video-container-kylo">
+        <video 
+          class="bg-video" 
+          id="bg-video-kylo" 
+          muted 
+          loop 
+          playsinline 
+          preload="auto">
+          <source src="Kylo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay" id="overlay-shield-kylo"></div>
+      </div>
+
+      <!-- Pure White Centered Minimal Product Details Overlay -->
+      <div class="kylo-content" id="kylo-content">
+        <div class="glass-card-wrapper" id="kylo-positioner">
+          <div class="glass-card" id="kylo-card">
+            <h2 class="kylo-heading" id="kylo-heading">kylo</h2>
+            <p class="kylo-subtext" id="kylo-subtext">
+              intelligent scheduling and deep focus.
+            </p>
+          <!-- Social Links -->
+          <div class="social-links-wrapper" id="kylo-socials">
+            <a href="#" class="social-link" aria-label="Website">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Reddit">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.12c0 1.258 1.026 2.277 2.287 2.277 1.26 0 2.28-1.019 2.28-2.277 0-1.258-1.02-2.278-2.28-2.278-.962 0-1.782.593-2.125 1.442l-4.526-1.06a.717.717 0 0 0-.85.508l-1.706 5.373c-2.825.045-5.385.834-7.25 2.073-.483-.484-1.155-.783-1.895-.783-1.465 0-2.657 1.186-2.657 2.645 0 .971.523 1.815 1.3 2.253-.021.173-.031.35-.031.528 0 3.493 4.54 6.331 10.136 6.331 5.594 0 10.134-2.838 10.134-6.331 0-.179-.011-.355-.031-.529.776-.438 1.299-1.282 1.299-2.253zm-19.165 1.194c0-.756.617-1.371 1.374-1.371.288 0 .548.089.764.242-1.096.837-1.821 1.884-2.039 3.037-.058-.255-.099-.516-.099-.785zm5.553 4.603c-1.332 0-2.627-.193-3.619-.512a.637.637 0 0 1-.444-.795.636.636 0 0 1 .792-.444c.833.267 2.015.467 3.271.467 1.257 0 2.438-.2 3.271-.467a.636.636 0 0 1 .792.444.637.637 0 0 1-.444.795c-.992.319-2.287.512-3.619.512zm-1.867-2.68c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm6.657 0c-.768 0-1.391-.624-1.391-1.393 0-.768.623-1.392 1.391-1.392.768 0 1.392.624 1.392 1.392 0 .769-.624 1.393-1.392 1.393zm1.905-.985c-.218-1.152-.942-2.198-2.038-3.036.216-.153.475-.243.763-.243.757 0 1.375.615 1.375 1.371 0 .269-.041.531-.1.786z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Kickstarter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.518 10.364l-4.735-4.482c-.378-.388-.868-.614-1.443-.614-1.04 0-1.921.841-1.921 1.944v10.301c0 1.051.815 1.884 1.902 1.884.585 0 1.077-.245 1.48-.687l5.109-5.719c.406-.471.558-1.037.558-1.637 0-.585-.207-1.112-.56-1.503L16.518 10.364zM6.48 4.298c0-1.04.832-1.885 1.866-1.885.558 0 1.066.218 1.453.624.378.397.595.915.595 1.472v14.73c0 .546-.217 1.045-.585 1.433-.396.406-.885.623-1.443.623-1.03 0-1.886-.84-1.886-1.894V4.298h.001z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Designer Console for Kylo -->
+      <div class="designer-console" id="kylo-console">
+        <div class="console-header">KYLO LAYOUT CONSOLE</div>
+        
+        <div class="slider-group">
+          <label for="kylo-scale">Scale: <span id="kylo-scale-val">1.0</span></label>
+          <input type="range" id="kylo-scale" min="0.5" max="1.5" step="0.01" value="1.0">
+        </div>
+
+        <div class="slider-group">
+          <label for="kylo-x">X Position: <span id="kylo-x-val">0px</span></label>
+          <input type="range" id="kylo-x" min="-800" max="800" step="1" value="0">
+        </div>
+
+        <div class="slider-group">
+          <label for="kylo-y">Y Position: <span id="kylo-y-val">0px</span></label>
+          <input type="range" id="kylo-y" min="-800" max="800" step="1" value="0">
+        </div>
+        
+        <div class="console-footer">
+          transform: scale(<span id="kylo-scale-out">1.0</span>)<br>
+          translate(<span id="kylo-x-out">0px</span>, <span id="kylo-y-out">0px</span>);
+        </div>
+      </div>
+    </section>
+
+  <!-- IdeaPad Draggable Modal -->
+  <div class="ideapad-modal" id="ideapad-modal">
+    <div class="ideapad-header" id="ideapad-header">
+      <h3 class="ideapad-title">IdeaPad</h3>
+      <button class="ideapad-close" id="ideapad-close" aria-label="Close IdeaPad">&times;</button>
+    </div>
+    <div class="ideapad-body">
+      <textarea id="ideapad-textarea" class="ideapad-textarea" placeholder="Capture your thoughts..."></textarea>
+    </div>
+    <div class="ideapad-footer">
+      <div class="ideapad-footer-left">
+        <button class="ideapad-snapshot" id="ideapad-download">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Save
+        </button>
+      </div>
+      <div class="ideapad-footer-right">
+        <span class="ideapad-status" id="ideapad-status">Stored in memory</span>
+        <button class="ideapad-save" id="ideapad-save">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP CDNs (Core + ScrollToPlugin) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+  <!-- Interactive Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
