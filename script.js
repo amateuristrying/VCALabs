@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (globalLogoTab) {
     globalLogoTab.addEventListener('click', (e) => {
       e.preventDefault();
-      history.pushState({ slide: 1 }, '', '#hero');
+      history.pushState({ slide: 1 }, '', window.location.pathname);
       goToSlide(1);
     });
   }
@@ -451,7 +451,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navLineup) {
     navLineup.addEventListener('click', (e) => {
       e.preventDefault();
-      history.pushState({ slide: 3 }, '', '#lineup');
+      history.pushState({ slide: 3 }, '', window.location.pathname);
       goToSlide(3);
     });
   }
@@ -461,7 +461,7 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('click', (e) => {
       const target = parseInt(item.getAttribute('data-target'), 10);
       if (target) {
-        history.pushState({ slide: target }, '', `#slide-${target}`);
+        history.pushState({ slide: target }, '', window.location.pathname);
         goToSlide(target);
       }
     });
